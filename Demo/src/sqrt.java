@@ -8,6 +8,20 @@ public class sqrt {
         System.out.println(newtonSQRT(root));
     }
 
+    // 69. sqrt(x)
+    public int mySqrt(int x) {
+        int l = 0, r = x;
+        while (l < r) {
+            int mid = (l + r + 1) >>> 1;
+            if (mid > x / mid) {
+                r = mid - 1;
+            } else {
+                l = mid;
+            }
+        }
+        return l;
+    }
+
     static double newtonSQRT(double n){
         double root;
         double x=n;
