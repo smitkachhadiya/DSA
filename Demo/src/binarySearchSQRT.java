@@ -1,4 +1,3 @@
-package DSA.src;
 
 public class binarySearchSQRT {
     public static void main(String[] args) {

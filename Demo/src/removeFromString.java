@@ -1,4 +1,4 @@
-package DSA.src;
+
 
 public class removeFromString {
     public static void main(String[] args) {
