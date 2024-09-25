@@ -8,6 +8,7 @@ public class mergeSortedArray {
         int i = m + n - 1;
         m--;
         n--;
+
         while (m >= 0 && n >= 0) {
             if (nums1[m] > nums2[n]) {
                 nums1[i--] = nums1[m--];
