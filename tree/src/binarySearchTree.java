@@ -57,7 +57,7 @@ public class binarySearchTree {
             return;
         }
 
-        int mid = (start + end) / 2;
+        int mid = (start + end) / 2;    
 
         this.insert(nums[mid]);
         populatedSorted(nums, start, mid);
@@ -97,5 +97,19 @@ public class binarySearchTree {
             return true;
         }
         return Math.abs(height(node.left) - height(node.right)) <= 1 && balanced(node.left) && balanced(node.right);
+    }
+
+    public static void main(String[] args) {
+        binarySearchTree tree = new binarySearchTree();
+        int[] nums = { 5, 2, 7, 1, 4, 6, 9, 8, 3, 10 };
+        tree.populate(nums);
+        tree.display();
+        System.out.println(tree.balanced());
+
+        System.out.println("\n\n");
+        int[] nums2 = { 1,2,3,4,5,6,7,8,9,10,11,12 };
+        tree.populatedSorted(nums2);
+        tree.display();
+        System.out.println(tree.balanced());
     }
 }

@@ -107,9 +107,9 @@ class binaryTree {
         if (node == null) {
             return;
         }
-        preOrder(node.left);
+        inOrder(node.left);
         System.out.print(node.value + " ");
-        preOrder(node.right);
+        inOrder(node.right);
     }
 
     // post order traverse
@@ -121,9 +121,15 @@ class binaryTree {
         if (node == null) {
             return;
         }
-        preOrder(node.left);
-        preOrder(node.right);
+        postOrder(node.left);
+        postOrder(node.right);
         System.out.print(node.value + " ");
     }
 
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+         binaryTree tree = new binaryTree();
+         tree.populate(scanner);
+         tree.prettyDisplay();
+    }
 }
