@@ -74,7 +74,7 @@ class AVLtree {
                 return leftRotate(node);
             }
             if(height(node.right.left) - height(node.right.right) > 0) {
-                // left right case
+                // right left case
                 node.right = rightRotate(node.right);
                 return leftRotate(node);
             }
@@ -90,8 +90,8 @@ class AVLtree {
         c.right = p;
         p.left = t;
 
-        p.height = Math.max(height(p.left), height(p.right) + 1);
-        c.height = Math.max(height(c.left), height(c.right) + 1);
+        p.height = Math.max(height(p.left), height(p.right)) + 1;
+        c.height = Math.max(height(c.left), height(c.right)) + 1;
 
         return c;
     }
@@ -103,8 +103,8 @@ class AVLtree {
         p.left = c;
         c.right = t;
 
-        p.height = Math.max(height(p.left), height(p.right) + 1);
-        c.height = Math.max(height(c.left), height(c.right) + 1);
+        p.height = Math.max(height(p.left), height(p.right)) +1;
+        c.height = Math.max(height(c.left), height(c.right)) + 1;
 
         return p;
     }
@@ -159,4 +159,13 @@ class AVLtree {
         return Math.abs(height(node.left) - height(node.right)) <= 1 && balanced(node.left) && balanced(node.right);
     }
 
+    public static void main(String[] args) {
+        AVLtree tree = new AVLtree();
+
+        for(int i=0; i < 1000; i++) {
+            tree.insert(i);
+        }
+
+        System.out.println(tree.height());
+    }
 }
