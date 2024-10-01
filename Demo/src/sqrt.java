@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class sqrt {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double root = sc.nextInt();
-        System.out.println(newtonSQRT(root));
+        int root = sc.nextInt();
+        System.out.println(sqrtBinarySearch(root));
     }
 
     // 69. sqrt(x)
@@ -37,5 +37,24 @@ public class sqrt {
         }
 
         return root;
+    }
+
+    static int sqrtBinarySearch(int n){
+        int start=0,end=n;
+        int ans=0;
+        while (start <= end){
+            int mid = start + (end - start) / 2;
+
+            if(mid*mid == n){
+                return mid;
+            } else if(mid*mid < n){
+                start = mid+1;
+                ans = mid;
+            }else {
+                end = mid-1;
+            }
+
+        }
+        return ans;
     }
 }
