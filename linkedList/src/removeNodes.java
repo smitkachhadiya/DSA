@@ -1,5 +1,3 @@
-package DSA.dataSets.linklist;
-
 public class removeNodes {
     public class ListNode {
        int val;

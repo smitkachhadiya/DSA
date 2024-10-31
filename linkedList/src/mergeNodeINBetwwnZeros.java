@@ -1,5 +1,3 @@
-package DSA.dataSets.linklist;
-
 public class mergeNodeINBetwwnZeros {
     public class ListNode {
         int val;

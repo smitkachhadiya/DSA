@@ -1,5 +1,3 @@
-
-
 public class binarySLLtoInt {
     class ListNode{
         int val;

@@ -1,5 +1,3 @@
-package DSA.dataSets.linklist;
-
 public class swapNodes {
     public class ListNode {
       int val;

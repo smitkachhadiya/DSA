@@ -1,5 +1,3 @@
-package DSA.dataSets.linklist;
-
 public class designLinkList {
     public class ListNode {
         int val;

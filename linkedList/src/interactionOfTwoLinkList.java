@@ -1,4 +1,3 @@
-package DSA.dataSets.linklist;
 
 public class interactionOfTwoLinkList {
     // 160. Intersection of Two Linked Lists
@@ -13,9 +12,9 @@ public class interactionOfTwoLinkList {
         }
     }
 
-    public middleNodeOfLinklist.ListNode getIntersectionNode(middleNodeOfLinklist.ListNode headA, middleNodeOfLinklist.ListNode headB) {
-        middleNodeOfLinklist.ListNode temp1 = headA;
-        middleNodeOfLinklist.ListNode temp2 = headB;
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode temp1 = headA;
+        ListNode temp2 = headB;
         int len1=checkLength(headA);
         int len2=checkLength(headB);
 
@@ -39,7 +38,7 @@ public class interactionOfTwoLinkList {
         return null;
     }
 
-    int checkLength(middleNodeOfLinklist.ListNode temp){
+    int checkLength(ListNode temp){
         int len =0;
         while (temp != null){
             len++;

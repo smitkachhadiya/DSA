@@ -1,4 +1,4 @@
-package DSA.dataSets.linklist;
+
 
 public class isHappyNumber {
     public boolean isHappy(int n) {

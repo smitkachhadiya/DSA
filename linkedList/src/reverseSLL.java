@@ -1,5 +1,3 @@
-package DSA.dataSets.linklist;
-
 public class reverseSLL {
 
     class ListNode{

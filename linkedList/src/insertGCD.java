@@ -1,5 +1,3 @@
-package DSA.dataSets.linklist;
-
 public class insertGCD {
     public class ListNode {
         int val;

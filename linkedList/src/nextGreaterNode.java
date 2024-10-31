@@ -1,4 +1,3 @@
-package DSA.dataSets.linklist;
 
 import java.util.ArrayList;
 import java.util.List;

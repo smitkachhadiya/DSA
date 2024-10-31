@@ -1,5 +1,3 @@
-package DSA.dataSets.linklist;
-
 public class mergeSortSLL {
     class ListNode{
         int val;

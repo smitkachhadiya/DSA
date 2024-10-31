@@ -1,5 +1,3 @@
-package DSA.dataSets.linklist;
-
 public class palindromSLL {
     class ListNode{
         int val;

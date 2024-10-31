@@ -1,5 +1,3 @@
-package DSA.dataSets.linklist;
-
 public class splitLinkedListInParts {
     public class ListNode {
       int val;
