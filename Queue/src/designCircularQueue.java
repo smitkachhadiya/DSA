@@ -1,5 +1,3 @@
-package DSA.dataSets.queue;
-
 public class designCircularQueue {
     // 622. Design Circular Queue
 
