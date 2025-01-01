@@ -21,7 +21,6 @@ public class romanToInteger {
             char currentChar = s.charAt(i);
             int currentValue = romanToInt.get(currentChar);
 
-            // Apply the subtraction rule
             if (currentValue < prevValue) {
                 total -= currentValue;
             } else {
