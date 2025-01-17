@@ -1,5 +1,3 @@
-package DSA.Astring;
-
 public class addBinary {
 
     // 67. Add Binary
