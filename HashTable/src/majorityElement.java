@@ -2,7 +2,8 @@ import java.util.HashMap;
 
 public class majorityElement {
 
-    //
+    // 169. Majority Element
+
     public static int majorityElement(int[] nums) {
         HashMap<Integer , Integer> count = new HashMap<>();
         int majority = nums.length/2;
