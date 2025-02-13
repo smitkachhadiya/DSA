@@ -33,7 +33,7 @@ public class maxSumOfPairWithEqualSumOfDigits {
     }
 
     public static void main(String[] args) {
-        int[] arr = {18,43,36,13,7};
+        int[] arr = {18,43,36,13,7,16,27};
         System.out.println(maximumSum(arr));
     }
 }
