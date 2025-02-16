@@ -13,7 +13,6 @@ public class NQueens2 {
         }
 
         int count=0;
-
         for (int col = 0; col < board.length; col++) {
             if(isSafe(board,row,col)){
                 board[row][col] = true;
