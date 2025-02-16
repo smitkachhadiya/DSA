@@ -1,17 +1,14 @@
+public class NQueens2 {
 
+    //  52. N-Queens II
 
-public class NQueens {
-    public static void main(String[] args) {
-        int n=4;
+    public static int totalNQueens(int n) {
         boolean[][] board = new boolean[n][n];
-        System.out.println(queens(board,0));
-
+        return queens(board,0);
     }
 
-    static int queens(boolean[][] board,int row){
+    private static int queens(boolean[][] board, int row){
         if(row == board.length){
-            display(board);
-            System.out.println();
             return 1;
         }
 
@@ -43,27 +40,19 @@ public class NQueens {
             }
         }
 
-        //checking left diagonal
+        //checking right diagonal
         int maxRight = Math.min(row,board.length-col-1);
         for(int i=1 ; i <= maxRight ; i++){
             if(board[row-i][col+i]){
                 return false;
             }
         }
-
         return true;
     }
 
-    static void display(boolean[][] board){
-        for(boolean[] arr : board){
-            for(boolean element : arr){
-                if(element){
-                    System.out.print("Q ");
-                }else {
-                    System.out.print("X ");
-                }
-            }
-            System.out.println();
-        }
+    public static void main(String[] args) {
+        System.out.println("ans : " + totalNQueens(4));
+        System.out.println("ans : " + totalNQueens(8));
+        System.out.println("ans : " + totalNQueens(6));
     }
 }
