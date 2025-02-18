@@ -11,7 +11,7 @@ public class pathSum {
           this.right = right;
       }
   }
-    //112. Path Sum
+    //  112. Path Sum
 
     public boolean hasPathSum(TreeNode root, int targetSum) {
         if(root == null){
