@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/String/String.iml" filepath="$PROJECT_DIR$/String/String.iml" />
       <module fileurl="file://$PROJECT_DIR$/backTracking/backTracking.iml" filepath="$PROJECT_DIR$/backTracking/backTracking.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkedList/linkedList.iml" filepath="$PROJECT_DIR$/linkedList/linkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidingWindow/slidingWindow.iml" filepath="$PROJECT_DIR$/slidingWindow/slidingWindow.iml" />
       <module fileurl="file://$PROJECT_DIR$/tree/tree.iml" filepath="$PROJECT_DIR$/tree/tree.iml" />
     </modules>
   </component>
