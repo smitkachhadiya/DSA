@@ -16,6 +16,7 @@ public class N_aryTreePreorderTraversal {
         if(node == null){
             return;
         }
+
         ans.add(node.val);
         for (Node child : node.children){
             dfs(child,ans);
