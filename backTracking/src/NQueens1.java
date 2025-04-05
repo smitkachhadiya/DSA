@@ -39,6 +39,7 @@ public class NQueens1 {
         for(int i=1 ; i <= maxLeft ; i++){
             if(board[row-i][col-i]){
                 return false;
+
             }
         }
 
@@ -65,6 +66,7 @@ public class NQueens1 {
             }
             ans.add(temp.toString());
         }
+
         return ans;
     }
 
