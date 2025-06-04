@@ -1,11 +1,42 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class maximumCandiesYouCanGetFromBoxes {
 
     // 1298. Maximum Candies You Can Get from Boxes
 
     public static int maxCandies(int[] status, int[] candies, int[][] keys, int[][] containedBoxes, int[] initialBoxes) {
+        Queue<Integer> q = new LinkedList<>();
+        for(int start : initialBoxes){
+            q.offer(start);
+        }
+
+        Set<Integer> closed = new HashSet<>();
+        int total = 0;
+
+        while (!q.isEmpty()){
+            int current = q.poll();
+            if(status[current] == 0){
+                closed.add(current);
+                continue;
+            }
+
+            for (int open : keys[current]){
+                status[open] = 1;
+                if(closed.contains(open)){
+                    q.offer(open);
+                    closed.remove(open);
+                }
+            }
+
+            total += candies[current];
+            for(int neighbor : containedBoxes[current]){
+                q.offer(neighbor);
+            }
+        }
+        return total;
+    }
+
+    public static int maxCandies2(int[] status, int[] candies, int[][] keys, int[][] containedBoxes, int[] initialBoxes) {
         int total = 0;
         boolean openable = true;
         List<Integer> iBoxes = new ArrayList<>();
@@ -48,5 +79,6 @@ public class maximumCandiesYouCanGetFromBoxes {
         int[] initialBoxes = {0};
 
         System.out.println(maxCandies(status , candies , keys , containedBoxes , initialBoxes));
+        System.out.println(maxCandies2(status , candies , keys , containedBoxes , initialBoxes));
     }
 }
