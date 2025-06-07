@@ -6,6 +6,8 @@ public class lexicogtraphicallyMinStringAfterRemovingStars {
 
     //  3170. Lexicographically Minimum String After Removing Stars
 
+    //  Method 1 : Using Priority Queue
+
     public static String clearStars(String s){
         char[] arr = s.toCharArray();
         List<Integer>[] position = new ArrayList[26];
@@ -42,7 +44,42 @@ public class lexicogtraphicallyMinStringAfterRemovingStars {
         return sb.toString();
     }
 
-    // get TLE for larger value
+
+    // Method 2 : Using List ---------------------------------------------------------------------------------------------
+
+    public static String clearStars1(String s){
+        List<List<Integer>> list = new ArrayList<>();
+        for (int i = 0; i < 26; i++) {
+            list.add(new ArrayList<>());
+        }
+
+        char[] arr = s.toCharArray();
+
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] == '*'){
+                for (int j = 0; j < 26; j++) {
+                    if(!list.get(j).isEmpty()){
+                        int position = list.get(j).remove(list.get(j).size() - 1);
+                        arr[position] = '*';
+                        break;
+                    }
+                }
+            } else{
+                list.get(arr[i]-'a').add(i);
+            }
+        }
+        StringBuilder res = new StringBuilder();
+        for (char c : arr) {
+            if (c != '*') {
+                res.append(c);
+            }
+        }
+        return res.toString();
+
+    }
+
+    // In following cod - got TLE for larger value -------------------------------------------------------------------------------
+
     public static String clearStars2(String s) {
         StringBuilder sb = new StringBuilder();
         for(char ch : s.toCharArray()){
