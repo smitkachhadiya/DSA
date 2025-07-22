@@ -8,7 +8,7 @@ public class maxErasureValue {
     public static int maximumUniqueSubarray(int[] nums) {
         int ans = 0;
         int start = 0 , currentSum = 0;
-        int[] arr = new int[1001];
+        int[] arr = new int[10001];
 
         for (int i = 0; i < nums.length; i++) {
             int current = nums[i];
