@@ -1,6 +1,6 @@
 public class findTheMinAreaToCoverAllOnes1 {
 
-    //  3197. Find the Minimum Area to Cover All Ones I
+    //  3195. Find the Minimum Area to Cover All Ones I
 
     public static int minimumSum(int[][] grid) {
         int minRow = grid.length , maxRow = 0;
