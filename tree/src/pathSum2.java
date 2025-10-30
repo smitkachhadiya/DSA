@@ -3,7 +3,7 @@ import java.util.List;
 
 public class pathSum2 {
 
-    //  113. Path Sum II113. Path Sum II
+    //  113. Path Sum II
 
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         List<List<Integer>> ans = new ArrayList<>();
