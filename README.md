@@ -22,7 +22,6 @@ Each folder in this repository represents a **problem category** (like Arrays, S
 
 * Solutions to LeetCode problems
 * Clean and readable code
-* Comments explaining logic and complexity
 * Optimized approaches (when available)
 
 ---
@@ -87,6 +86,7 @@ DSA/
 ## 🌐 Connect with Me
 
 * LeetCode: [smit_k](https://leetcode.com/u/smit_k/)
+* Codolio: [smit_k](https://codolio.com/profile/smit_k)
 
 ---
 
