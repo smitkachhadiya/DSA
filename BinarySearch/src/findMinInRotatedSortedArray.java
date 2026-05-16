@@ -1,6 +1,6 @@
 public class findMinInRotatedSortedArray {
 
-    //153. Find Minimum in Rotated Sorted Array
+    //  153. Find Minimum in Rotated Sorted Array
     public static int findMin(int[] nums) {
         int left = 0 , right = nums.length-1;
         while (left < right){
